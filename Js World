@@ -1,0 +1,287 @@
+//mountains
+setXPos(20);
+setZPos(20);
+setScale(20,40,20);
+setColor("grey");
+cone();
+
+setXPos(18);
+setZPos(18);
+setScale(18,38,18);
+setColor("darkgray");
+cone();
+
+setXPos(22);
+setZPos(22);
+setScale(18,32,18);
+setColor("grey");
+cone();
+
+
+setXPos(25);
+setZPos(21);
+setScale(18,30,18);
+setColor("grey");
+cone();
+setPosition(24.9,14.4,21)
+setScale(2,2,2)
+setColor("lightgray")
+sphere();
+
+//cloud
+setYPos(13);
+setXPos(20);
+setZPos(20);
+setScale(2,2,2);
+setColor("white");
+sphere();
+setYPos(12.5);
+setXPos(18.5);
+setZPos(18.5);
+setScale(1.5,1.5,1.5);
+sphere();
+setYPos(12.5);
+setXPos(21.5);
+setZPos(21.5);
+setScale(1.5,1.5,1.5);
+sphere();
+
+//snow >>>>> move into funtion 
+setColor("white");
+setScale(.2,.2,.2);
+setXPos(20);
+setZPos(20);
+setYPos(6);
+sphere();
+
+function snow (){
+    
+}
+
+//city
+setXPos(20);
+setZPos(-20);
+setYPos(0);
+setScale(3,20,3);
+setColor("#c4bda9");
+box();
+setXPos(20);
+setZPos(-17);
+//setYPos(0);
+setScale(3,15,3);
+setColor("#998f73");
+box();
+setXPos(23);
+setZPos(-18);
+setYPos(0);
+setScale(3,25,3);
+setColor("#998f73");
+box();
+    
+    setXPos(2)
+    setZPos(-40)
+    setYPos(0)
+    //road 
+    setXPos(3)
+    setZPos(40)
+    setScale(2,0,200)
+    setColor("black")
+    box()
+    //car 
+    function car (){
+    resetCursor()
+    setXPos(3)
+    setZPos(20)
+    setYPos(1.5)
+    setScale()
+    setColor("darkred")
+    box()
+    
+    }
+    car();
+    //sun 
+    setXPos(35);
+    setZPos(35);
+    setYPos(30);
+    setScale(8,8,8);
+    setColor("yellow");
+    sphere();
+    
+//forest-round tree 
+
+//forest- cone tree 
+//setXPos(9);
+//setZPos(-9);
+//setYPos(0);
+//setColor("brown");
+//setScale(.3,4,.3);
+//cylinder();
+//setYPos(3);
+//setScale(2.5,2.5,2.5);
+//setColor("green");
+//cone();
+//setYPos(4);
+//setScale(2,2,2);
+//setColor("green");
+//cone();
+
+//forest house 
+setYPos(0)
+setXPos(-30)
+setZPos(30)
+setScale(1,7,7)
+//setRotation(0,-30,0)
+setColor("#b39236")
+box()
+
+setXPos(-27)
+setZPos(27)
+setScale(1,7,7)
+setRotation(0,90,0)
+box()
+
+setXPos(-27)
+setZPos(34)
+setScale(1,7,7)
+setRotation(0,90,0)
+box()
+
+setXPos(-24)
+setZPos(27)
+setScale(1,7,3)
+setRotation(0,90,0)
+box()
+
+let colors = ["forestgreen", "green", "darkgreen", "darkolivegreen"] 
+for (let i =0; i < 50; i++){
+    for (let j = 0; j < 1; j++){
+        resetCursor();
+        
+        let xPos = (Math.random() - 1) * 40;
+        let zPos = (Math.random() - 1) * 40;
+        
+        tree(xPos, zPos);
+        
+        
+    }
+}
+
+function tree(x, z){
+    setXPos(x);
+    setZPos(z);
+    
+    setColor("#5c3806");
+    setScale(0.25, 1, 0.25);
+    cylinder()
+    
+    
+    
+    getRandomColor(colors);
+    setScale(1,1,1);
+    setYPos(1);
+    cone();
+    setYPos(1.5);
+    cone();
+    
+    resetCursor();
+}
+
+//tunnel
+function tunnel(){
+setZPos(-36);
+setXPos(1);
+setYPos(0);
+setColor("orange");
+setScale(1,10,1);
+box();
+setZPos(-36);
+setXPos(5);
+setYPos(0);
+setColor("orange");
+setScale(1,10,1);
+box();
+}
+ tunnel();
+
+
+//statue
+setColor("#8af567");
+setPosition(30,0,-30);
+setScale(8,2,8);
+cylinder();
+setPosition(30,6,-30)
+setScale(5,10,5)
+cone();
+setPosition(30,12,-30)
+setScale(3,5,3)
+setRotation(0,0,180)
+cone();
+//setPosition(30,11.5,-30)
+//setScale(2,2,2)
+//sphere();
+setPosition(30,18,-30)
+setScale(2,2,2)
+sphere();
+
+setPosition(31,21,-31);
+setRotation(0,35,-35)
+setScale(3,.5,3);
+cylinder();
+
+setRotation(50,0,40)
+setPosition(27.5,11,-31)
+setScale(.5,6,.5)
+cylinder();
+
+setPosition(30,14,-33)
+setScale(1,1,1)
+sphere();
+setPosition(30,9,-33)
+setScale(1,1,1)
+sphere();
+
+setPosition(26,12.5,-29)
+setScale(2,2,2)
+colorShift(sphere(), "blue");
+
+// city-continued 
+
+
+setRotation(0,0,0)
+setPosition(-2,0,2)
+setScale(5,5,5)
+box();
+
+
+
+let newColors = ["brown", "grey", "orange", "beige", "yellow"] 
+for (let i =0; i < 15; i++){
+    for (let j = 0; j < 1; j++){
+        resetCursor();
+        
+        let xPos = (Math.random() -1) * 40;
+        let zPos = (Math.random() -1) * -40;
+        
+        house(xPos, zPos);
+        
+        
+    }
+}
+
+function house(x, z){
+    setXPos(x);
+    setZPos(z);
+    
+    getRandomColor(newColors);
+    setScale(5, 5, 5);
+    box()
+    
+    
+    
+    getRandomColor(newColors);
+    setScale(1,1,1);
+    setYPos(1);
+    cone();
+    
+    resetCursor();
+}
